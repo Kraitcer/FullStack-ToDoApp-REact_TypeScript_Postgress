@@ -1,22 +1,23 @@
 {
   "name": "fullstack-todoapp-react-typescript",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
+    "server": "node ./server/server.js",
+    "client": "cd client && npm start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kraitcer/FullStack-ToDoApp-REact_TypeScript_Postgress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kraitcer/FullStack-ToDoApp-REact_TypeScript_Postgress/issues"
+  },
+  "homepage": "https://github.com/Kraitcer/FullStack-ToDoApp-REact_TypeScript_Postgress#readme",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.2.0"
+    "if-env": "^1.0.4"
   }
 }

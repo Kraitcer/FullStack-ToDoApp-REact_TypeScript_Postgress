@@ -1,7 +1,24 @@
 import React from "react";
 
-const listHeader = () => {
-  return <div>listHeader</div>;
+interface ListHeaderProp {
+  listName: string;
+}
+
+const ListHeader = ({ listName }: ListHeaderProp) => {
+  const signOut = () => {
+    console.log("signOut");
+  };
+  return (
+    <div className="list-Header">
+      <h1>{listName}</h1>
+      <div className="button-container">
+        <button className="create">ADD NEW</button>
+        <button className="signout" onClick={signOut}>
+          SIGN OUT
+        </button>
+      </div>
+    </div>
+  );
 };
 
-export default listHeader;
+export default ListHeader;
